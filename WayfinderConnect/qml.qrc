@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>images/odl_logo.png</file>
+    </qresource>
+</RCC>
