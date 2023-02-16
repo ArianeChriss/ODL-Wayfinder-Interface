@@ -1,0 +1,13 @@
+# ninja log v5
+2	93	6982363283220077	.qt_plugins/Qt6_QmlPlugins_Imports_WayfinderConnect.cmake	cc1d7080f98e069f
+93	355	6982363284273286	WayfinderConnect_autogen/mocs_compilation.cpp	3282bfb29e58ceb8
+2	93	6982363283220077	C:/Users/arian/Documents/GitHub/ODL-Wayfinder-Interface/build-WayfinderConnect-Desktop_Qt_6_4_2_MinGW_64_bit-Release/.qt_plugins/Qt6_QmlPlugins_Imports_WayfinderConnect.cmake	cc1d7080f98e069f
+93	355	6982363284273286	WayfinderConnect_autogen/timestamp	3282bfb29e58ceb8
+93	355	6982363284273286	C:/Users/arian/Documents/GitHub/ODL-Wayfinder-Interface/build-WayfinderConnect-Desktop_Qt_6_4_2_MinGW_64_bit-Release/WayfinderConnect_autogen/timestamp	3282bfb29e58ceb8
+358	431	6982363286577214	WayfinderConnect_autogen/EWIEGA46WW/qrc_qml.cpp	e4b54a56f1aef494
+93	355	6982363284273286	C:/Users/arian/Documents/GitHub/ODL-Wayfinder-Interface/build-WayfinderConnect-Desktop_Qt_6_4_2_MinGW_64_bit-Release/WayfinderConnect_autogen/mocs_compilation.cpp	3282bfb29e58ceb8
+358	431	6982363286577214	C:/Users/arian/Documents/GitHub/ODL-Wayfinder-Interface/build-WayfinderConnect-Desktop_Qt_6_4_2_MinGW_64_bit-Release/WayfinderConnect_autogen/EWIEGA46WW/qrc_qml.cpp	e4b54a56f1aef494
+431	478	6982363287096900	CMakeFiles/WayfinderConnect.dir/WayfinderConnect_autogen/mocs_compilation.cpp.obj	d60f614aa12c8836
+436	1206	6982363294366887	CMakeFiles/WayfinderConnect.dir/WayfinderConnect_autogen/EWIEGA46WW/qrc_qml.cpp.obj	e145c77757612898
+433	2085	6982363303158468	CMakeFiles/WayfinderConnect.dir/main.cpp.obj	103ee525fd40b5da
+2089	2238	6982363304651267	WayfinderConnect.exe	8136728e9eeca78b
