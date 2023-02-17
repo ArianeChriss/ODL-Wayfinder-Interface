@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
+import CommandLine 1.0
 
 Window {
     id: root
@@ -27,6 +28,10 @@ Window {
         text: "Wayfinder Connect"
         topPadding: 0
     }
+    Wayfinder {
+        id: connection
+    }
+
     TextField {
         id: command
         x: logo.x
@@ -36,6 +41,6 @@ Window {
         height: root.height / 15
         width: root.width / 1.5
         color: "darkgray"
-        placeholderText: qsTr("Enter command...")
+        placeholderText: qsTr(connection.connect("ip address here"))
     }
 }
