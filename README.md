@@ -13,11 +13,14 @@ _*Note: if committing changes from a not-mine system, add build folders to the r
 
 ## For Development:
 Interface frontend is done in main.qml, with functions being called from main.cpp and any other C++ source files. Any images or other resources need to be added in qml.qrc.
+
 QML: [Qt Tutorial](https://doc.qt.io/qt-6/qml-tutorial.html)
 ### For adding C++ functions to QML:
 1. Create C++ .cpp and .h files ([helpful forum post for formatting](https://forum.qt.io/topic/33170/call-c-function-from-qml/2))
 2. Add include statement to top of main.cpp:
-`#include "myfile.h"`
+
+    `#include "MyFunctions.h"`
+
 3. Define function file version in main.cpp:
 ```
     QGuiApplication app(argc, argv);
@@ -27,6 +30,7 @@ QML: [Qt Tutorial](https://doc.qt.io/qt-6/qml-tutorial.html)
     QQmlApplicationEngine engine;
 ```
 4. Add import statement with version to top of main.qml:
-`import MyFunctions 1.0`
+
+    `import MyFunctions 1.0`
 
 ## For Building:
