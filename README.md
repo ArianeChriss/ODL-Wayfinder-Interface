@@ -9,7 +9,7 @@ An interface for connecting to the Ocean Discovery League Wayfinder system, sett
 4. File --> New Project --> Import Project --> Git Clone --> Choose...
 5. Add repository URL (https://github.com/ArianeChriss/ODL-Wayfinder-Interface.git)
 
-_ _*Note: if committing changes from a not-mine system, add build folders to the repository .gitignore file_ _
+_ *Note: if committing changes from a not-mine system, add build folders to the repository .gitignore file _
 
 ## For Development:
 Interface frontend is done in main.qml, with functions being called from main.cpp and any other C++ source files. Any images or other resources need to be added in qml.qrc.
