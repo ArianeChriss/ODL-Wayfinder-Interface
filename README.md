@@ -8,3 +8,5 @@ An interface for connecting to the Ocean Discovery League Wayfinder system, sett
 3. Open Qt Creator
 4. File --> New Project --> Import Project --> Git Clone --> Choose...
 5. Add repository URL (https://github.com/ArianeChriss/ODL-Wayfinder-Interface.git)
+
+*Note: if committing changes from a not-mine system, add build folders to the repository .gitignore file
