@@ -5,9 +5,10 @@ An interface for connecting to the Ocean Discovery League Wayfinder system, sett
 ## Instructions for Environment Setup:
 1. Download [Qt Online Installer](https://www.qt.io/download-qt-installer?utm_referrer=https%3A%2F%2Fwww.qt.io%2Fdownload-open-source%3Futm_referrer%3Dhttps%253A%252F%252Fwww.qt.io%252Fdownload)
 2. Run Qt installer, select open source development under LGPL license
-3. Open Qt Creator
-4. File --> New Project --> Import Project --> Git Clone --> Choose...
-5. Add repository URL (https://github.com/ArianeChriss/ODL-Wayfinder-Interface.git)
+3. Install additional libraries: [add here]
+5. Open Qt Creator
+6. File --> New Project --> Import Project --> Git Clone --> Choose...
+7. Add repository URL (https://github.com/ArianeChriss/ODL-Wayfinder-Interface.git)
 
 _*Note: if committing changes from a not-mine system, add build folders to the repository .gitignore file_
 
@@ -36,3 +37,5 @@ QML: [Qt Tutorial](https://doc.qt.io/qt-6/qml-tutorial.html)
 _*Note: Sometimes changes to certain files don't take effect until Cmake is rerun. Clean project (Build --> Clean), Run Cmake, and Rebuild._
 
 ## For Building:
+
+__Make sure you're building with MSVC2019 64 bit, if on Windows. WebEngine is not supported by MinGW.__
