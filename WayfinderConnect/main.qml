@@ -53,7 +53,6 @@ Window {
         onClicked: {
             halp.text = connection.connect("thingy")
             winld.source = "video_feed.qml"
-            //halp.text = string("thingy".type)
         }
     }
     Loader {
