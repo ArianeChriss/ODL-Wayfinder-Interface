@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>images/odl_logo.png</file>
+        <file>CommandLine.h</file>
+        <file>CommandLine.cpp</file>
+        <file>video_feed.qml</file>
     </qresource>
 </RCC>
