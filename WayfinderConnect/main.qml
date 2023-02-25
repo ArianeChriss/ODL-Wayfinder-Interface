@@ -4,64 +4,123 @@ import QtQuick.Window 2.15
 import CommandLine 1.0
 import QtWebEngine
 import QtQml
-//#include <QString>
 
 Window {
     id: root
     width: Screen.desktopAvailableWidth / 1.5
     height: Screen.desktopAvailableHeight / 1.5
     visible: true
-    color: "#0e2730"
+    color: "#004D64"
     title: qsTr("Wayfinder")
+    FontLoader { id: montserrat; source: "Montserrat-VariableFont_wght.ttf" }
+    FontLoader { id: montserrat_bold; source: "Montserrat-ExtraBold.ttf" }
+    FontLoader { id: montserrat_italic; source: "Montserrat-Italic-VariableFont_wght.ttf" }
+    Rectangle {
+        id: logo_back
+        height: root.height / 5
+        width: root.width
+        color: "#000000"
+    }
     Image {
         id: logo
+        anchors.top: logo_back.top
+        anchors.left: logo_back.left
+        anchors.margins: height / 2
+        //anchors.horizontalCenter: tab_bar.horizontalCenter
+        //anchors.verticalCenter: logo_back.verticalCenter
         source: "images/odl_logo.png"
-        height: root.height / 9
+        height: logo_back.height / 2
         width: (1999 / 718) * logo.height
-        x: root.width / 25
-        y: root.height / 19
+    }
+    Rectangle {
+        id: tab_bar
+        anchors.horizontalCenter: logo.horizontalCenter
+        anchors.top: logo_back.bottom
+        height: (root.height / 5) * 3
+        width: logo.width + logo.height
+        color: "#BBBBBB"
+        ListView {
+            anchors.fill: parent;
+            model: Qt.fontFamilies()
+
+            delegate: Item {
+                height: 40;
+                width: ListView.view.width
+                Text {
+                    anchors.centerIn: parent
+                    text: modelData;
+                }
+            }
+        }
     }
     Text {
         id: title
-        x: root.width / 3 //logo.width + (root.width / 20) + root.width / 15
-        y: logo.height - (root.height / 15)
-        font.family: "Montserrat"
-        font.bold: true
+        anchors.verticalCenter: logo.verticalCenter
+        anchors.left: tab_bar.right
+        font.family: montserrat.name
         font.pointSize: logo.height
-        color: "#004f60"
+        color: "#FFFFFF"
         text: "Wayfinder"
-        topPadding: 0
     }
     Wayfinder {
         id: connection
     }
-
-    TextField {
-        id: command
-        x: logo.x
-        y: logo.y + logo.height * 2
-        focus: true
-        font.pointSize: command.height / 1.75
-        height: root.height / 15
-        width: root.width / 1.5
-        color: "darkgray"
-        //placeholderText: qsTr(connection.connect("ip address here"))
+    Rectangle {
+        id: command_box
+        anchors.left: tab_bar.right
+        anchors.top: logo_back.bottom
+        height: 30
+        width: root.width / 4
+        anchors.margins: 10
+        TextField {
+            id: command
+            anchors.verticalCenter: command_box.verticalCenter
+            anchors.left: command_box.left
+            width: command_box.width
+            height: command_box.height
+            font.pointSize: command_box.height / 2.25
+            font.family: montserrat_italic.name
+            font.italic: true
+            color: "#111111"
+            placeholderTextColor: "#444444"
+            placeholderText: "IP Address..."
+            background: Rectangle {
+                color: "transparent"
+                border.color: "transparent"
+            }
+            onDisplayTextChanged: {
+                if (command.text !== "") {
+                    command.font.italic = false
+                    command.font.family = montserrat_bold.name
+                }
+                else {
+                    command.font.italic = true
+                    command.font.family = montserrat_italic.name
+                }
+            }
+        }
     }
-
     Button {
-        id: ldbutton
+        id: command_button
         onClicked: {
-            halp.text = connection.connect("thingy")
+            halp.text = connection.connect(command.text)
             winld.source = "video_feed.qml"
         }
     }
     Loader {
         id: winld
     }
-    Text {
-        id: halp
-        width: parent.width
-        font.pointSize: 100
-        text: ""
+    Rectangle {
+        id: command_return_box
+        anchors.top: tab_bar.bottom
+        height: root.height / 5
+        width: root.width
+        color: "#0E2446"
+        Text {
+            id: halp
+            width: parent.width
+            font.pointSize: 100
+            text: ""
+        }
     }
 }
