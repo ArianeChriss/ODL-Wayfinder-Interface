@@ -13,7 +13,7 @@ void Wayfinder::connect(QString ip_address)
     // CREATE NAMED PIPE, IF WINDOWS32 CreateNamedPipeA, IF MAC/UNIX pipe()
 
 
-
+    // COULD ALSO GO THROUGH QTCREATOR FOR UTILS SSH FILE
 
 
 
