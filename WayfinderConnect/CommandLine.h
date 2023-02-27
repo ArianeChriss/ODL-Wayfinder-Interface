@@ -6,6 +6,9 @@
 #include <QUrl>
 #include <QString>
 #include <iostream>
+//#include <signal.h>
+//#include <sys/types.h>
+//#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,7 +24,7 @@ public:
         //q_url = new QUrl("https://192.168.1.153:8000");
         //q_url.setUrl(&help);
     //};
-    Q_INVOKABLE QString connect(QString ip_address);
+    Q_INVOKABLE void connect(QString ip_address);
 
     /*QUrl url() const;
     void setUrl(QString link) {
@@ -33,8 +36,12 @@ public:
 private:
     QUrl *q_url;
 
-    string* command_strings = new string[1] {
-            "echo thing"
+    char command_strings[5][128] {
+            "echo thing",
+            "ssh -tt edvin@",
+            "ikea",
+            "cd Desktop/wayfinder",
+            "python3 video_test_iv.py"
     };
 
 signals:

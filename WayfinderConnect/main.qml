@@ -41,7 +41,26 @@ Window {
         color: "#BBBBBB"
         ListView {
             anchors.fill: parent;
-            model: Qt.fontFamilies()
+            model: ListModel {
+                ListElement {
+                    name: "module1"
+                }
+                ListElement {
+                    name: "module2"
+                }
+                ListElement {
+                    name: "module3"
+                }
+            }
+            delegate: Text {
+                text: name
+                font.family: montserrat.name
+                font.bold: true
+                font.pointSize: 15
+                padding: 5
+            }
+
+            /*model: Qt.fontFamilies()
 
             delegate: Item {
                 height: 40;
@@ -50,7 +69,7 @@ Window {
                     anchors.centerIn: parent
                     text: modelData;
                 }
-            }
+            }*/
         }
     }
     Text {
@@ -102,8 +121,14 @@ Window {
     }
     Button {
         id: command_button
+        anchors.verticalCenter: command_box.verticalCenter
+        anchors.left: command_box.right
+        height: command_box.height
+        width: command_box.width/4
+        text: qsTr("Connect")
+        font.family: montserrat.name
         onClicked: {
-            halp.text = connection.connect(command.text)
+            command_output.text = connection.connect(command.text)
             winld.source = "video_feed.qml"
         }
     }
@@ -117,10 +142,12 @@ Window {
         width: root.width
         color: "#0E2446"
         Text {
-            id: halp
+            id: command_output
+            padding: 15
             width: parent.width
-            font.pointSize: 100
+            font.pointSize: 12
             text: ""
+            color: "#FFFFFF"
         }
     }
 }
