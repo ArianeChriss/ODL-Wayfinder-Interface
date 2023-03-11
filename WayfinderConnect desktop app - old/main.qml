@@ -128,7 +128,7 @@ Window {
         text: qsTr("Connect")
         font.family: montserrat.name
         onClicked: {
-            command_output.text = connection.connect(command.text)
+            //command_output.text = connection.connect(command.text)
             winld.source = "video_feed.qml"
         }
     }
