@@ -13,7 +13,9 @@ void Wayfinder::connect(QString ip_address)
     // CREATE NAMED PIPE, IF WINDOWS32 CreateNamedPipeA, IF MAC/UNIX pipe()
 
 
-
+    // COULD ALSO GO THROUGH QTCREATOR FOR UTILS SSH FILE
+    
+    // POSSIBLY USE QPROCESS, https://doc.qt.io/qt-6/qprocess.html#:~:text=QProcess%20forwards%20the%20input%20of,or%20modified%20in%20Qt%205.2.
 
 
 
