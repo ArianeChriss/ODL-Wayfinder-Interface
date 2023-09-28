@@ -8,3 +8,4 @@
 ### Packages to install
 ### Files
 ### Setting a static IP
+## Bugs
