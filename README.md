@@ -1,4 +1,4 @@
-# ODL-Wayfinder-Interface
+# Wayfinder
 ## Basic operation
 ### Connecting to the Wayfinder (static IP)
 ### Starting the interface
